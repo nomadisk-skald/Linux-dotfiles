@@ -1,0 +1,7 @@
+adwaita-qt5-git
+adwaita-qt6-git
+brave-bin
+catppuccin-gtk-theme-mocha
+hyprshot
+yay
+yay-debug
