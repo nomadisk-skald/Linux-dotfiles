@@ -1,0 +1,35 @@
+
+[Default Applications]
+
+# feh for image viewing
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/gif=feh.desktop
+image/webp=feh.desktop
+image/bmp=feh.desktop
+image/tif=feh.desktop
+
+# Mupdf for PDF and other formats
+application/pdf=mupdf.desktop
+application/xps=mupdf.desktop
+application/epub+zip=mupdf.desktop
+#application/x-mobipocket-ebook=mupdf.desktop
+#application/x-fictionbook+xml=mupdf.desktop
+#application/vnd.comicbook+zip=mupdf.desktop
+#image/svg+xml=mupdf.desktop
+#text/plain=mupdf.desktop
+#image/jpeg=mupdf.desktop
+#image/png=mupdf.desktop
+#image/bmp=mupdf.desktop
+#image/gif=mupdf.desktop
+#image/tiff=mupdf.desktop
+#image/x-portable-anymap=mupdf.desktop
+#image/x-portable-graymap=mupdf.desktop
+#image/x-portable-bitmap=mupdf.desktop
+#image/x-portable-pixmap=mupdf.desktop
+#image/x-portable-arbitrarymap=mupdf.desktop
+#image/vnd.ms-photo=mupdf.desktop
+#image/jp2=mupdf.desktop
+#image/vnd.adobe.photoshop=mupdf.desktop
+
+
