@@ -1,0 +1,120 @@
+# System/Base
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+intel-ucode
+efibootmgr
+man-db
+zram-generator
+lshw
+smartmontools
+
+# Shell & CLI Utilities
+bat
+fd
+fzf
+htop
+nano
+ranger
+starship
+wget
+calc
+btop
+inxi
+yay
+yay-debug
+
+# Development
+git
+jdk-openjdk
+nodejs
+npm
+luarocks
+vim
+neovim
+
+# Audio/Video/Multimedia
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+pavucontrol
+libpulse
+gst-plugin-pipewire
+playerctl
+cava
+
+# Graphics/Design
+gimp
+krita
+inkscape
+blender
+mupdf
+feh
+
+# Fonts
+ttf-firacode-nerd
+ttf-jetbrains-mono
+noto-fonts-emoji
+
+# Networking
+networkmanager
+network-manager-applet
+iwd
+wireless_tools
+blueman
+bluez-utils
+rclone
+
+# KDE/Qt Apps
+ark
+dolphin
+gwenview
+kcalc
+kclock
+kmix
+okular
+polkit-kde-agent
+sddm
+qt5-wayland
+qt6-wayland
+
+# Hyprland & Related
+hyprland
+hypridle
+hyprlock
+hyprpaper
+hyprshot
+xdg-desktop-portal-hyprland
+uwsm
+
+# Wayland Utilities
+waybar
+wofi
+grim
+slurp
+dunst
+brightnessctl
+foliate
+
+# Browsers & Communication
+firefox
+obsidian
+
+# Office/Productivity
+libreoffice-fresh
+tuxguitar
+
+# CUDA/NVIDIA
+cuda
+nvidia-dkms
+libva-nvidia-driver
+
+# Miscellaneous
+calc
+cmatrix
+fastfetch
+cliphist

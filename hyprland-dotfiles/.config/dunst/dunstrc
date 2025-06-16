@@ -1,0 +1,25 @@
+
+[global]
+font = FiraMono Nerd Font 10
+corner_radius = 12
+frame_width = 2
+separator_height = 2
+separator_color = "#89b4fa"
+frame_color = "#89b4fa"
+highlight = "#89b4fa"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#585b70"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#7f849c"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
+

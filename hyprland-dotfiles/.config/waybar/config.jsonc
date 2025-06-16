@@ -2,9 +2,9 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/arch","hyprland/window"],
-  "modules-right": ["network", "backlight", "pulseaudio", "cpu", "battery", "clock"],
+  "modules-right": ["tray", "backlight", "pulseaudio", "cpu", "battery", "clock"],
   "clock": {
-    "format": "{:%a %d %H:%M}",
+    "format": "| {:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -12,21 +12,21 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "<span size='13000' foreground='#cba6f7'>{icon} </span>",
-    "format-warning": "<span size='13000' foreground='#cba6f7'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#cba6f7'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#cba6f7'> </span>",
-    "format-plugged": "<span size='13000' foreground='#cba6f7'> </span>",
-    "format-alt": "<span size='13000' foreground='#cba6f7'>{icon} </span> {time}",
-    "format-full": "<span size='13000' foreground='#cba6f7'> </span>",
+    "format": "<span size='13000' foreground='#cba6f7'>{icon}</span>",
+    "format-warning": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#cba6f7'></span>",
+    "format-plugged": "<span size='13000' foreground='#cba6f7'></span>",
+    "format-alt": "<span size='13000' foreground='#cba6f7'>{icon}</span> {time}",
+    "format-full": "<span size='13000' foreground='#cba6f7'></span>",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "Capacity: {capacity}%"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#cba6f7'>  </span>",
-    "format-ethernet": "<span size='13000' foreground='#cba6f7'>󰤭  </span> Disconnected",
+    "format-wifi": "<span size='13000' foreground='#cba6f7'>| </span>",
+    "format-ethernet": "<span size='13000' foreground='#cba6f7'>| 󰤭</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#cba6f7'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000' foreground='#cba6f7'>| </span>Disconnected",
     "tooltip-format-wifi": "Signal Name: {essid}\nSignal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
@@ -39,7 +39,11 @@
       "tooltip-format": "Sound Volume: {volume}%"
   },
 
-  //ADDITIONAL MODUlES
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "show-passive-items": true
+  },
   
   "custom/arch": {
     "format": "", // Arch icon from Nerd Fonts
@@ -48,7 +52,7 @@
 
   "backlight": {
     "device": "intel_backlight",  // or your actual device
-    "format": "{icon}",
+    "format": "| {icon}",
     //"format": "{icon} {percent}%",
     "format-icons": [ "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
     "interval": 1,
