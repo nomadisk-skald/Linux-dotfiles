@@ -2,8 +2,13 @@
 # ~/.bashrc
 #
 
+#-------------------PROMTS----------------------#
+# Starship
 eval "$(starship init bash)"
 
+#------------------FUNCTIONS--------------------#
+
+# FindFile - Find and open files using fd and fzf
 ff() {
   local file
   file=$(fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always --line-range :100 {}') || return
@@ -17,6 +22,7 @@ ff() {
   esac
 }
 
+# FindFileDir - Find and open a directory using fd and fzf
 ffd() {
   local file dir
   file=$(fd --type f --hidden --exclude .git | fzf --preview 'bat --style=numbers --color=always --line-range :100 {}') || return
@@ -24,6 +30,13 @@ ffd() {
   (cd "$dir" && exec "$SHELL")
 }
 
+#----------------CUSTOM ALIASES-----------------#
+alias music='cmus'
+alias files='ranger'
+alias calendar='calcurse'
+alias sound='pavucontrol'
+
+#-------------------OTHER-----------------------#
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
