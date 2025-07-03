@@ -47,8 +47,8 @@ button:hover {
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @sapphire;
+    border-top: 2px solid @sapphire;
 }
 
 #workspaces button.urgent {
@@ -76,8 +76,15 @@ button:hover {
   padding-right: 4px;
 }
 
+#custom-date,
+#custom-time {
+  padding: 0 6px;
+  font-family: "FiraCode Nerd Font", monospace;
+  color: @sapphire; /* Match your theme */
+}
+
 #clock {
-    color: @mauve;
+    color: @sapphire;
     /*color: @maroon;*/
     /*border-bottom: 2px solid @maroon;*/
 }
@@ -151,3 +158,13 @@ button:hover {
   padding: 0 6px;
   margin: 0 4px;
 }
+
+#temperature {
+  color: @mauve;
+  /*border-bottom: 2px solid @yellow;*/
+  padding: 0 6px;
+  margin: 0 4px;
+}
+
+
+

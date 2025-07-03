@@ -2,15 +2,31 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/arch","hyprland/window"],
-  "modules-right": ["tray", "backlight", "pulseaudio", "cpu", "battery", "clock"],
-  "clock": {
-    "format": "| {:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  "modules-right": ["tray","custom/separator", "backlight", "pulseaudio", "temperature", "cpu", "battery","custom/separator", "custom/date", "custom/separator", "custom/time"],
+
+//Modules configuration
+  //"clock": {
+  // "format": "{:%a %d %H:%M}",
+  //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  //},
+
+  "custom/date": {
+    "exec": "date '+ %B %a %d'",
+    "interval": 60,
+    "tooltip-format": false,
+    "on-click": "kitty -e calcurse"
   },
+  "custom/time": {
+    "exec": "date '+ %H:%M'",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "kitty -e termdown" 
+  },
+
   "battery": {
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "<span size='13000' foreground='#cba6f7'>{icon}</span>",
     "format-warning": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
@@ -23,10 +39,10 @@
     "tooltip-format": "Capacity: {capacity}%"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#cba6f7'>| </span>",
-    "format-ethernet": "<span size='13000' foreground='#cba6f7'>| 󰤭</span> Disconnected",
+    "format-wifi": "<span size='13000' foreground='#cba6f7'></span>",
+    "format-ethernet": "<span size='13000' foreground='#cba6f7'>󰤭</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#cba6f7'>| </span>Disconnected",
+    "format-disconnected": "<span size='13000' foreground='#cba6f7'></span>Disconnected",
     "tooltip-format-wifi": "Signal Name: {essid}\nSignal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
@@ -36,7 +52,9 @@
       "format-icons": {
           "default": ["", "", ""]
       },
-      "tooltip-format": "Sound Volume: {volume}%"
+      "tooltip-format": "Sound Volume: {volume}%",
+      "on-click": "kitty -e pulsemixer"
+
   },
 
   "tray": {
@@ -52,7 +70,7 @@
 
   "backlight": {
     "device": "intel_backlight",  // or your actual device
-    "format": "| {icon}",
+    "format": "{icon}",
     //"format": "{icon} {percent}%",
     "format-icons": [ "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
     "interval": 1,
@@ -60,9 +78,30 @@
     //"tooltip": false
   },
 
+  "custom/separator": {
+    "format": "  ",  // or "|", "/", "│", or any Unicode character
+    "tooltip": false
+  },
+
+  "custom/separator-back": {
+    "format": "  ",
+    "tooltip": false
+  },
+
+   "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C ",
+    "format": "",
+    "tooltip-format": "Temperature: {temperatureC}°C",
+    "on-click": "kitty -e btop"
+  },
+
   "cpu": {
     "format": "",
     "tooltip": true,
-    "interval": 2
+    "interval": 2, 
+    "on-click": "kitty -e btop"
   }
  }

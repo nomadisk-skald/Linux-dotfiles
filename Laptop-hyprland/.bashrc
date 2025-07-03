@@ -32,7 +32,7 @@ ffd() {
 
 #----------------CUSTOM ALIASES-----------------#
 alias music='cmus'
-alias files='ranger'
+alias files='yazi'
 alias calendar='calcurse'
 alias sound='pavucontrol'
 
